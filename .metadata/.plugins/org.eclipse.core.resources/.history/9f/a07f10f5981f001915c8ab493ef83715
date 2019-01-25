@@ -1,0 +1,21 @@
+import os, django
+from django.template import Template, Context
+import datetime
+ 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+django.setup()
+
+rawTemp = '''
+{% for object in objects %}
+    {% if forloop.first %} <li class ="first"> 
+    {% else %} <li>
+    {% endif %}
+    {{ object }}
+    </li>
+{% endfor % } '''
+
+t = Template(rawTemp)
+objects = ['1','2','3','4']
+c = Context({'objects' : objects})
+
+print(t.render(c))

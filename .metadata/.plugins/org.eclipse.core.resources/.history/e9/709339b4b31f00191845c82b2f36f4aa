@@ -1,0 +1,25 @@
+import os, django, datetime
+from django.template import Template, Context
+from multiprocessing.util import get_temp_dir
+from django.template.loader import get_template
+ 
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+# django.setup()
+# 
+# rawTemp ='''
+# {% ifequal section 'sitenews' %}
+#     Site News
+# {% else %}
+#     No News Here
+# {% endifequal %}
+# '''
+# 
+# t = Template(rawTemp)
+# sections  = 'sitenew'
+# 
+# c = Context({'section' : sections})
+# 
+# print(t.render(c))
+
+print(os.path.join(os.path.dirname(__file__),'template/').replace('\\','/'))
+print(get_template('current_datetime.html'))

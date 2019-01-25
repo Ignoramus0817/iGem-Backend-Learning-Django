@@ -1,0 +1,8 @@
+from BlogSys import urls
+from django.db import connection
+from Users.models import User
+
+User.object.filter(userID = 1).update(email_Address = '')
+user_list = User.objects.all()
+
+print(user_list)

@@ -1,0 +1,11 @@
+from django.http import HttpResponse
+import time
+
+def main(request):
+    return HttpResponse("Main Page")
+
+def hello(request):
+    return HttpResponse("Hello world, this is my first trial!")
+
+def showTime(request):
+    return HttpResponse("The current time is " + time.strftime('%Y-%m-%d %H:%M:%S'))

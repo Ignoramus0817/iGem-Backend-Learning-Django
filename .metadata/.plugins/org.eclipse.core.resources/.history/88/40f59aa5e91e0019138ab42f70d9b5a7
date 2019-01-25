@@ -1,0 +1,10 @@
+import os, django
+from django.template import Template, Context
+ 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+django.setup()
+
+t = Template('My name is {{ name }} . ')
+c = Context({'name' : 'Tanz'})
+
+print(t.render(c))

@@ -1,0 +1,7 @@
+import os, django
+from django.db import connection
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+django.setup()
+
+corsor = connection.cursor()

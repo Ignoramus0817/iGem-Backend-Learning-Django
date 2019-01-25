@@ -1,0 +1,26 @@
+import os, django
+from django.template import Template, Context
+import datetime
+ 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+django.setup()
+
+rawTemp = '''
+{% for country in forloop %}
+    {% for city in country %}
+    country #{{ forloop.counter }}
+    city #{{ forloop.parentloop.counter}}
+    {{ forloop.parentloop }}
+    {% endfor %}
+{% endfor %}
+'''
+
+t = Template(rawTemp)
+China = ['Beijing', 'Wuhan', 'Shanghai']
+Britan = ['London', 'Oxford', 'Cambridge']
+USA = ['New York', 'Los Angeles', 'Oklahoma', 'San Antonio']
+Canada = ['Otawa', 'Torronto', 'Montreal']
+countries = [China, Britan, USA, Canada]
+c = Context({'forloop' : countries})
+
+print(t.render(c))

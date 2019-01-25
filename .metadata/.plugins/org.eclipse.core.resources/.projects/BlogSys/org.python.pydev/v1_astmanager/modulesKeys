@@ -1,0 +1,17 @@
+MODULES_MANAGER_V2
+BlogSys.__init__|D:\IgnorazWork\iGem-web\BlogSys\BlogSys\__init__.py
+BlogSys.settings|D:\IgnorazWork\iGem-web\BlogSys\BlogSys\settings.py
+BlogSys.urls|D:\IgnorazWork\iGem-web\BlogSys\BlogSys\urls.py
+BlogSys.view|D:\IgnorazWork\iGem-web\BlogSys\BlogSys\view.py
+BlogSys.wsgi|D:\IgnorazWork\iGem-web\BlogSys\BlogSys\wsgi.py
+Exps.__init__|D:\IgnorazWork\iGem-web\BlogSys\Exps\__init__.py
+Exps.exp1|D:\IgnorazWork\iGem-web\BlogSys\Exps\exp1.py
+Exps.exp2|D:\IgnorazWork\iGem-web\BlogSys\Exps\exp2.py
+Users.__init__|D:\IgnorazWork\iGem-web\BlogSys\Users\__init__.py
+Users.admin|D:\IgnorazWork\iGem-web\BlogSys\Users\admin.py
+Users.apps|D:\IgnorazWork\iGem-web\BlogSys\Users\apps.py
+Users.migrations.__init__|D:\IgnorazWork\iGem-web\BlogSys\Users\migrations\__init__.py
+Users.models|D:\IgnorazWork\iGem-web\BlogSys\Users\models.py
+Users.tests|D:\IgnorazWork\iGem-web\BlogSys\Users\tests.py
+Users.views|D:\IgnorazWork\iGem-web\BlogSys\Users\views.py
+manage|D:\IgnorazWork\iGem-web\BlogSys\manage.py

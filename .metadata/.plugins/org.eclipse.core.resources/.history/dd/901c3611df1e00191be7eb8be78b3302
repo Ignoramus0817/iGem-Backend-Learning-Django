@@ -1,0 +1,24 @@
+from django.http import HttpResponse
+import time, datetime
+from http.cookiejar import offset_from_tz_string
+from tkinter.constants import OFF
+from django.http.response import Http404
+
+def main(request):
+    return HttpResponse("Main Page")
+
+def hello(request):
+    return HttpResponse("Hello world, this is my first trial!")
+
+def showTime(request):
+    return HttpResponse("The current time is " + time.strftime('%Y-%m-%d %H:%M:%S'))
+
+def hoursAhead(request, offset):
+    try:
+        offset = int(offset)
+    except ValueError:
+        raise Http404()
+    dt = datetime.datetime.now() + datetime.timedelta(hours = offset)
+    assert False
+    return HttpResponse("In %s hours it will be %s." %(offset, dt))
+    

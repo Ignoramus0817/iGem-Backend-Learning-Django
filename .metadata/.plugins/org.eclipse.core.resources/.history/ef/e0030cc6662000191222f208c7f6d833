@@ -1,0 +1,11 @@
+from BlogSys import urls
+from django.db import connection
+from Users.models import User
+
+user_3 = User.objects.create(userID = 3, userName = 'Carto_z', passWord = '12345678', nickName = 'Carto_z',
+                             gender = 'M', personalSign = '.')
+
+
+user_list = User.objects.all()
+
+print(user_list)

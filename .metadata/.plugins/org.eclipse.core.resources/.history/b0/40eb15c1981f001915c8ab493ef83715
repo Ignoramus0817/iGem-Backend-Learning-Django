@@ -1,0 +1,28 @@
+import os, django
+from django.template import Template, Context
+import datetime
+ 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+django.setup()
+
+rawTemp = '''<p> Dear Mr {{ name }}, </p>
+
+<p> Thanks for placing an order from {{ company }}. It's scheduled to 
+ship on {{ ship_date|date:"F j, Y" }} </p>
+
+{% if ordered_warranty %}
+<p> Your warranty information will be included in the box. </p>
+{% else %}
+<p> You will be on your own if the product stopped working. </p>
+{% endif %}
+
+<p>Sincerely,<br/>{{ company }} <p/>
+'''
+
+t = Template(rawTemp)
+c = Context({'name' : 'Tanz',
+             'company' : 'Umbrella',
+             'ship_date' : datetime.date(2009, 4, 2),
+             'ordered_warranty' : False})
+
+print(t.render(c))

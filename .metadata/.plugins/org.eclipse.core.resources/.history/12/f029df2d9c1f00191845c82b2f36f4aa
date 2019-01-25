@@ -1,0 +1,17 @@
+import os, django
+from django.template import Template, Context
+import datetime
+ 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+django.setup()
+
+rawTemp = '''
+{% for l in links %}
+    {{ l }} {% if not forloop.last %} | {% endif %}
+{% endfor %}'''
+
+t = Template(rawTemp)
+links = ['1','2','3','4']
+c = Context({'links' : links})
+
+print(t.render(c))

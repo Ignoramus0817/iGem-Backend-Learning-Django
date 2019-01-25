@@ -1,0 +1,21 @@
+import os, django
+from django.template import Template, Context
+import datetime
+ 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BlogSys.settings')
+django.setup()
+
+rawTemp ='''
+{% ifequal section 'sitenews' %}
+    Site News
+{% else %}
+    No News Here
+{% endifequal %}
+'''
+
+t = Template(rawTemp)
+sections  = 'sitenews'
+
+c = Context({'section' : sections})
+
+print(t.render(c))
